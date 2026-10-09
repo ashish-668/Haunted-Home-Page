@@ -43,7 +43,11 @@
 <body>
     <!-- Section First -->
     <section
-        class="bg-[url('/assets/images/png/hero-bg.png')] bg-cover w-full pb-[321px] max-xl:pb-[150px] max-lg:pb-[80px] max-md:pb-[60px]">
+        class="relative bg-[url('/assets/images/png/hero-bg.png')] bg-cover w-full pb-[321px] max-xl:pb-[150px] max-lg:pb-[80px] max-md:pb-[60px]">
+        <div
+            class="absolute bg-[linear-gradient(180deg,rgba(0,10,26,0)_0%,#000A1A_100%)] bottom-0 left-0 min-h-[230px] w-full">
+
+        </div>
         <div class="w-full pt-[26px] max-md:pt-[20px] max-sm:pt-[14px]">
             <div class="mx-auto px-[20px] max-w-[1360px] w-full">
                 <div class="flex items-center justify-between w-full ml-[-1px] gap-[40px]">
@@ -51,29 +55,25 @@
                         <a href="#" class="text-custom-xl font-semibol text-white">Logo</a>
                     </div>
 
-                    <input type="checkbox" id="menu" class="hidden peer">
-                    <label for="menu" class="hidden max-lg:flex">
-                        <div class="group flex flex-col gap-[5px] items-center max-lg:z-[110]">
 
-                            <span
-                                class="h-[1.5px] w-[25px] rounded bg-white group-hover:bg-white/70 transition-all duration-300">
-                            </span>
+                    <button id="burger"
+                        class="relative z-[100] hidden max-lg:flex flex-col items-center justify-center gap-1 cursor-pointer">
 
-                            <span
-                                class="h-[1.5px] w-[25px] rounded bg-white group-hover:bg-white/70 transition-all duration-300">
-                            </span>
+                        <span
+                            class="burger-line bg-white min-h-[2px] rounded-md w-[30px] transition-all duration-300 ease-in-out"></span>
 
-                            <span
-                                class="h-[1.5px] w-[25px] rounded bg-white group-hover:bg-white/70 transition-all duration-300">
-                            </span>
+                        <span
+                            class="burger-line bg-white min-h-[2px] rounded-md w-[30px] transition-all duration-300 ease-in-out"></span>
 
-                        </div>
-                    </label>
+                        <span
+                            class="burger-line bg-white min-h-[2px] rounded-md w-[30px] transition-all duration-300 ease-in-out"></span>
 
-                    <div
-                        class="flex items-center justify-center mr-[-8px] max-lg:fixed max-lg:w-full max-lg:h-full max-lg:top-0 max-lg:right-[-100%] transition-all duration-300 ease-in peer-checked:right-0 max-lg:max-w-full max-lg:bg-black max-lg:z-[99]">
+                    </button>
+
+                    <div id="toggleSidebar"
+                        class="flex max-w-[634px] w-full items-center justify-center mr-[-8px] max-lg:fixed max-lg:w-full max-lg:h-full max-lg:top-0 max-lg:left-full transition-all duration-300 ease-in max-lg:max-w-full max-lg:bg-black max-lg:z-[99]">
                         <ul
-                            class="flex items-center max-w-[634px] w-full justify-between gap-[35px] max-lg:flex-col max-lg:justify-center ">
+                            class="flex items-center w-full justify-between gap-[35px] max-lg:flex-col max-lg:justify-center ">
                             <li class="flex">
                                 <a href="#"
                                     class="relative text-lg leading-150 font-medium text-white hover:text-white/70 transition-all duration-300 ease-in w-fit after:absolute after:h-[1px] after:bg-white/70 after:w-0 after:left-0 after:bottom-[-3px] hover:after:w-full after:transition-all after:duration-300 after:ease-in">
@@ -132,14 +132,14 @@
                     <div data-aos="fade-up-right" data-aos-duration="1000"
                         class="mt-[46px] flex w-full items-start max-lg:justify-center">
                         <button
-                            class="group relative overflow-hidden bg-white hover:bg-white/20 px-[40.5px] py-[15px] rounded-[45.5px] border-[0.5px] border-white cursor-pointer">
+                            class="group relative overflow-hidden bg-white hover:bg-white/20 px-[40.5px] py-[15px] rounded-[45.5px] border-[0.5px] border-white cursor-pointer max-sm:px-7 max-sm:py-3">
 
                             <span
                                 class="absolute z-[1] inset-y-0 left-[-120%] w-full rounded-[45.5px] bg-dull-blue blur-sm transition-all duration-500 ease-out group-hover:left-0 pointer-events-none">
                             </span>
 
                             <span
-                                class="relative z-20 text-custom-2xl text-dull-blue leading-152 font-medium transition-colors duration-300 group-hover:text-white">
+                                class="relative z-20 text-custom-2xl max-md:text-xl max-sm:text-lg text-dull-blue leading-152 font-medium transition-colors duration-300 group-hover:text-white">
                                 Get Started
                             </span>
 
@@ -176,7 +176,7 @@
                     class="w-full max-w-[1155px] flex gap-[30px] flex-wrap items-end justify-between max-lg:justify-center">
                     <div data-aos="fade-up-right" data-aos-duration="1000" class="flex">
                         <img height="574" width="574" class="max-md:max-w-[474px] max-md:w-full"
-                            src="/assets/images/png/ghost-img-1.png" alt="GHOST_IMAGE_1">
+                            src="/assets/images/gif/gif-img.gif" alt="GIF_IMAGE">
                     </div>
                     <div data-aos="fade-up-left" data-aos-duration="1000" class=" mb-[-10px] max-lg:mb-0">
                         <h2
@@ -354,7 +354,8 @@
 
                             <p
                                 class="mt-[25px] max-lg:mt-[20px] max-sm:mt-[15px] text-white/70 leading-150 text-xl font-normal max-lg:text-center max-lg:text-lg max-md:text-base">
-                                The team is <span class="font-medium">working on the future merch</span> thet will be available for the community members
+                                The team is <span class="font-medium">working on the future merch</span> thet will be
+                                available for the community members
                                 directly on our webpage.
                             </p>
                         </div>
@@ -376,11 +377,12 @@
 
                             <p
                                 class="mt-[25px] max-lg:mt-[20px] max-sm:mt-[15px] text-white/70 leading-150 text-xl max-lg:text-center max-lg:text-lg max-md:text-base">
-                              We will be giving <span class="font-medium">
-                                  30% of the 
-                                  royalties to charity
-                              </span> permanently 
-and we will keep spending on marketing, promotions and partnership.50% of the <span class="font-medium">riyalties</span> will go back to the community as rewards.
+                                We will be giving <span class="font-medium">
+                                    30% of the
+                                    royalties to charity
+                                </span> permanently
+                                and we will keep spending on marketing, promotions and partnership.50% of the <span
+                                    class="font-medium">riyalties</span> will go back to the community as rewards.
                             </p>
                         </div>
                     </div>
@@ -435,7 +437,7 @@ and we will keep spending on marketing, promotions and partnership.50% of the <s
                                 class="flex flex-col w-full items-start justify-start">
                                 <h3
                                     class="text-3xl max-w-[404px] leading-150 w-full font-semibold text-white text-right max-lg:text-left">
-                                    Q-4, 2021
+                                    Q-1, 2022
                                 </h3>
                                 <p
                                     class="max-w-[404px] w-full text-right mt-[24px] leading-182 text-white/70 max-lg:max-w-full max-lg:text-left">
@@ -455,7 +457,7 @@ and we will keep spending on marketing, promotions and partnership.50% of the <s
                         <div data-aos="zoom-in-right" data-aos-duration="1000"
                             class="flex flex-col w-full items-end justify-end max-lg:justify-start max-lg:items-start">
                             <h3 class="text-3xl max-w-[404px] leading-150 w-full font-semibold text-white text-left">
-                                Q-4, 2021
+                                Q-2, 2022
                             </h3>
 
                             <p
@@ -676,7 +678,8 @@ and we will keep spending on marketing, promotions and partnership.50% of the <s
                 <div
                     class="mb-[106px] flex max-md:items-center max-md:justify-start max-md:w-full max-lg:mb-[80px] max-md:mb-[50px] max-sm:mb-[30px]">
                     <h2 data-aos="zoom-in-down" data-aos-duration="1000"
-                        class="text-custom-5xl text-white leading-124 font-semibold text-center max-md:text-left">JOIN
+                        class="text-custom-5xl max-lg:text-5xl max-md:text-4xl max-sm:text-3xl text-white leading-124 font-semibold text-center max-md:text-left">
+                        JOIN
                         US</h2>
                 </div>
                 <div class="flex w-full items-center justify-between gap-[30px] flex-wrap">
@@ -794,6 +797,30 @@ and we will keep spending on marketing, promotions and partnership.50% of the <s
         firstFaq.classList.add('active', 'bg-transparent');
         firstIcon.classList.add('rotate-[-180deg]');
         firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
+
+        const burger = document.getElementById('burger');
+        const toggleSidebar = document.getElementById('toggleSidebar');
+        const burgerLines = document.querySelectorAll('.burger-line');
+
+        burger.addEventListener('click', () => {
+            if (toggleSidebar.style.left === "0px") {
+                toggleSidebar.style.left = "100%";
+                document.body.style.height = "";
+                document.body.style.overflow = "";
+                document.body.style.position = "";
+                burgerLines[0].classList.remove('rotate-45', 'translate-y-[5.5px]');
+                burgerLines[1].classList.remove('opacity-0');
+                burgerLines[2].classList.remove('-rotate-45', '-translate-y-[5.5px]');
+            } else {
+                toggleSidebar.style.left = "0px";
+                document.body.style.height = "100vh";
+                document.body.style.overflow = "hidden";
+                document.body.style.position = "relative";
+                burgerLines[0].classList.add('rotate-45', 'translate-y-[5.5px]');
+                burgerLines[1].classList.add('opacity-0');
+                burgerLines[2].classList.add('-rotate-45', '-translate-y-[5.5px]');
+            }
+        });
     </script>
 
 </body>
